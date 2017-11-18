@@ -1,21 +1,11 @@
 defmodule Nomad do
-  @moduledoc """
-  Documentation for Nomad.
-  """
+  require Logger
+  use HTTPoison.Base
 
   def host do
     Application.get_env(:nomad, :host)
   end
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Nomad.hello
-      :world
-
-  """
   def version do
     Application.get_env(:nomad, :version)
   end
@@ -24,5 +14,17 @@ defmodule Nomad do
     host = URI.parse(host())
     version = "/#{version()}"
     URI.merge(host, version) |> to_string
+  end
+
+  def process_url(url) do
+    base() <> url
+  end
+
+  def request(method, url) do
+    apply(Nomad, method, url)
+  end
+
+  def request!(method, url) do
+    apply(Nomad, :"#{method}!", url)
   end
 end
