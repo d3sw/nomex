@@ -3,7 +3,6 @@ defmodule Nomad do
   require Logger
   use HTTPoison.Base
 
-
   def host do
     Application.get_env(:nomad, :host)
   end
