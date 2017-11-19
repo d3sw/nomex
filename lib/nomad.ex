@@ -1,6 +1,8 @@
 defmodule Nomad do
+  alias Nomad.Response
   require Logger
   use HTTPoison.Base
+
 
   def host do
     Application.get_env(:nomad, :host)
@@ -25,6 +27,7 @@ defmodule Nomad do
   end
 
   def request!(method, url) do
-    apply(Nomad, :"#{method}!", url)
+    response = apply(Nomad, :"#{method}!", url)
+    Response.parse response
   end
 end
