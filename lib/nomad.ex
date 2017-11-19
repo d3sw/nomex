@@ -3,6 +3,18 @@ defmodule Nomad do
   require Logger
   use HTTPoison.Base
 
+  defmacro meta_get(function_name, path) do
+    quote do
+      def unquote(function_name)() do
+        Nomad.request(:get, [unquote(path)])
+      end
+
+      def unquote(:"#{function_name}!")() do
+        Nomad.request!(:get, [unquote(path)])
+      end
+    end
+  end
+
   def host do
     Application.get_env(:nomad, :host)
   end
@@ -21,13 +33,14 @@ defmodule Nomad do
     base() <> url
   end
 
-  def request(method, url) do
-    { status, response } = apply(Nomad, method, url)
+  # consider removing these methods, too much abstraction?
+  def request(method, params) do
+    { status, response } = apply(Nomad, method, params)
     { status, Response.parse(response) }
   end
 
-  def request!(method, url) do
-    response = apply(Nomad, :"#{method}!", url)
+  def request!(method, params) do
+    response = apply(Nomad, :"#{method}!", params)
     Response.parse response
   end
 end

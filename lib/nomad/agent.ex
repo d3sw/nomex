@@ -1,38 +1,8 @@
 defmodule Nomad.Agent do
-  @health_path "/agent/health"
-  @members_path "/agent/members"
-  @self_path "/agent/self"
-  @servers_path "/agent/servers"
+  require Nomad
 
-  def health do
-    Nomad.request(:get, [@health_path])
-  end
-
-  def health! do
-    Nomad.request!(:get, [@health_path])
-  end
-
-  def members do
-    Nomad.request(:get, [@members_path])
-  end
-
-  def members! do
-    Nomad.request!(:get, [@members_path])
-  end
-
-  def self do
-    Nomad.request(:get, [@self_path])
-  end
-
-  def self! do
-    Nomad.request!(:get, [@self_path])
-  end
-
-  def servers do
-    Nomad.request(:get, [@servers_path])
-  end
-
-  def servers! do
-    Nomad.request!(:get, [@servers_path])
-  end
+  Nomad.meta_get :members, "/agent/members"
+  Nomad.meta_get :self, "/agent/self"
+  Nomad.meta_get :servers, "/agent/servers"
+  Nomad.meta_get :health, "/agent/health"
 end
