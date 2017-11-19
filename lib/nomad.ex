@@ -23,7 +23,8 @@ defmodule Nomad do
   end
 
   def request(method, url) do
-    apply(Nomad, method, url)
+    { status, response } = apply(Nomad, method, url)
+    { status, Response.parse(response) }
   end
 
   def request!(method, url) do
