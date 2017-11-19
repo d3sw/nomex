@@ -15,6 +15,20 @@ defmodule Nomad do
     end
   end
 
+  defmacro meta_get_id(function_name, path) do
+    quote do
+      def unquote(function_name)(param_id) do
+        path = Path.join unquote(path), param_id
+        Nomad.request(:get, [path])
+      end
+
+      def unquote(function_name)(param_id) do
+        path = Path.join unquote(path), param_id
+        Nomad.request!(:get, [path])
+      end
+    end
+  end
+
   def host do
     Application.get_env(:nomad, :host)
   end
