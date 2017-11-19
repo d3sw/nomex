@@ -1,6 +1,6 @@
 # Nomad
 
-**TODO: Add description**
+## Hello! Please be aware that this is still a massive work in progress and will not be ready until Jan 1st, 2018
 
 ## Installation
 
