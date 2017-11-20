@@ -1,8 +1,9 @@
 defmodule Nomad.ACL do
-  require Nomad
+  require Nomad.Request
+  alias Nomad.Request
 
-  Nomad.meta_get :policies, "/acl/policies"
-  Nomad.meta_get :tokens, "/acl/tokens"
-  Nomad.meta_get_id :policy, "/acl/policy"
-  Nomad.meta_get_id :token, "/acl/token"
+  Request.meta_get :policies, "/acl/policies"
+  Request.meta_get :tokens, "/acl/tokens"
+  Request.meta_get_id :policy, "/acl/policy"
+  Request.meta_get_id :token, "/acl/token"
 end
