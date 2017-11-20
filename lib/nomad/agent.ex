@@ -1,8 +1,9 @@
 defmodule Nomad.Agent do
-  require Nomad
+  require Nomad.Request
+  alias Nomad.Request
 
-  Nomad.meta_get :members, "/agent/members"
-  Nomad.meta_get :self, "/agent/self"
-  Nomad.meta_get :servers, "/agent/servers"
-  Nomad.meta_get :health, "/agent/health"
+  Request.meta_get :members, "/agent/members"
+  Request.meta_get :self, "/agent/self"
+  Request.meta_get :servers, "/agent/servers"
+  Request.meta_get :health, "/agent/health"
 end
