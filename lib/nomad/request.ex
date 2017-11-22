@@ -21,9 +21,25 @@ defmodule Nomad.Request do
         Request.request(:get, [path])
       end
 
-      def unquote(function_name)(param_id) do
+      def unquote(:"#{function_name}!")(param_id) do
         path = Path.join unquote(path), param_id
         Request.request!(:get, [path])
+      end
+    end
+  end
+
+  defmacro meta_get_prefix(function_name, path) do
+    quote do
+      def unquote(function_name)(prefix) do
+        params = [ params: %{ prefix: prefix } ]
+        Request.request(:get, [unquote(path), [], params])
+      end
+    end
+
+    quote do
+      def unquote(:"#{function_name}!")(prefix) do
+        params = [ params: %{ prefix: prefix } ]
+        Request.request!(:get, [unquote(path), [], params])
       end
     end
   end

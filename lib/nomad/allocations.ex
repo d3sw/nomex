@@ -5,15 +5,6 @@ defmodule Nomad.Allocations do
   @index_path "/allocations"
 
   Request.meta_get :index, @index_path
+  Request.meta_get_prefix :index, @index_path
   Request.meta_get_id :allocation, "/allocation"
-
-  def index(prefix) do
-    path = "#{@index_path}?prefix=#{prefix}"
-    Request.request(:get, [path])
-  end
-
-  def index!(prefix) do
-    path = "#{@index_path}?prefix=#{prefix}"
-    Request.request!(:get, [path])
-  end
 end
