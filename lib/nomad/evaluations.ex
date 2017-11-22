@@ -2,7 +2,10 @@ defmodule Nomad.Evaluations do
   require Nomad.Request
   alias Nomad.Request
 
-  Request.meta_get :index, "/evaluations"
+  @evaluations_path "/evaluations"
+
+  Request.meta_get :index, @evaluations_path
+  Request.meta_get_prefix :index, @evaluations_path
   Request.meta_get_id :evaluation, "/evaluation"
 
   def allocations(evaluation_id) do
