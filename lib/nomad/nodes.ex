@@ -2,7 +2,10 @@ defmodule Nomad.Nodes do
   require Nomad.Request
   alias Nomad.Request
 
-  Request.meta_get :index, "/nodes"
+  @nodes_path "/nodex"
+
+  Request.meta_get :index, @nodes_path
+  Request.meta_get_prefix :index, @nodes_path
   Request.meta_get :node, "/node"
 
 
