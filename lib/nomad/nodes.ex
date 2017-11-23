@@ -4,8 +4,8 @@ defmodule Nomad.Nodes do
 
   @nodes_path "/nodex"
 
-  Request.meta_get :index, @nodes_path
-  Request.meta_get_prefix :index, @nodes_path
+  Request.meta_get :nodes, @nodes_path
+  Request.meta_get_prefix :nodes, @nodes_path
   Request.meta_get :node, "/node"
 
 

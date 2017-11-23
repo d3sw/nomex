@@ -4,8 +4,8 @@ defmodule Nomad.Evaluations do
 
   @evaluations_path "/evaluations"
 
-  Request.meta_get :index, @evaluations_path
-  Request.meta_get_prefix :index, @evaluations_path
+  Request.meta_get :evaluations, @evaluations_path
+  Request.meta_get_prefix :evaluations, @evaluations_path
   Request.meta_get_id :evaluation, "/evaluation"
 
   def allocations(evaluation_id) do
