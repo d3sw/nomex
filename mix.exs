@@ -34,7 +34,8 @@ defmodule Nomex.Mixfile do
   defp deps do
     [
       {:httpoison, "~> 0.13"},
-      {:poison, "~> 3.1"}
+      {:poison, "~> 3.1"},
+      {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
 
