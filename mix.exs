@@ -9,10 +9,8 @@ defmodule Nomex.Mixfile do
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod,
       deps: deps(),
-      description: "Unofficial HashiCorp Nomad Client for Elixir",
-      licenses: ["MIT"],
-      maintainers: ["Jin Lee"],
-      links: %{"GitHub" => "https://github.com/neojin/nomex"}
+      description: description(),
+      package: package()
     ]
   end
 
@@ -37,6 +35,19 @@ defmodule Nomex.Mixfile do
     [
       {:httpoison, "~> 0.13"},
       {:poison, "~> 3.1"}
+    ]
+  end
+
+  defp description() do
+    "Unofficial HashiCorp Nomad Client for Elixir"
+  end
+
+  defp package() do
+    [
+      name: "nomex",
+      licenses: ["MIT"],
+      maintainers: ["Jin Lee"],
+      links: %{"GitHub" => "https://github.com/neojin/nomex"}
     ]
   end
 end
