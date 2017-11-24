@@ -3,7 +3,7 @@ defmodule Nomad.Mixfile do
 
   def project do
     [
-      app: :nomad_client
+      app: :nomad_client,
       version: "0.0.1",
       elixir: "~> 1.4",
       build_embedded: Mix.env == :prod,
