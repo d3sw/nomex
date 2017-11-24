@@ -1,8 +1,8 @@
-# Unofficial Hashicorp Nomad Client for Elixir
+# Nomex
+
+Unofficial HashiCorp Nomad Client for Elixir
 
 This is an Elixir client for Nomad's web API found here: [https://www.nomadproject.io/api/index.html](https://www.nomadproject.io/api/index.html)
-
-## Hello! Please be aware that this is still a massive work in progress and will not be ready until Jan 1st, 2018
 
 ## Before You Proceed
 
@@ -23,14 +23,14 @@ As of now, all GET based JSON requests to Nomad should be working.
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `nomad_client` to your list of dependencies in `mix.exs`:
+by adding `nomex` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:nomad_client, "~> 0.1.0"}]
+  [{:nomex, "~> 0.0.1"}]
 end
 ```
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/nomad_client](https://hexdocs.pm/nomad_client).
+be found at [https://hexdocs.pm/nomex](https://hexdocs.pm/nomex).

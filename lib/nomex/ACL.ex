@@ -1,6 +1,6 @@
-defmodule Nomad.ACL do
-  require Nomad.Request
-  alias Nomad.Request
+defmodule Nomex.ACL do
+  require Nomex.Request
+  alias Nomex.Request
 
   Request.meta_get :policies, "/acl/policies"
   Request.meta_get :tokens, "/acl/tokens"

@@ -1,6 +1,6 @@
-defmodule Nomad.Agent do
-  require Nomad.Request
-  alias Nomad.Request
+defmodule Nomex.Agent do
+  require Nomex.Request
+  alias Nomex.Request
 
   Request.meta_get :members, "/agent/members"
   Request.meta_get :self, "/agent/self"

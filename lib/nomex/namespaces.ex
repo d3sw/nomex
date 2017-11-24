@@ -1,6 +1,6 @@
-defmodule Nomad.Namespaces do
-  require Nomad.Request
-  alias Nomad.Request
+defmodule Nomex.Namespaces do
+  require Nomex.Request
+  alias Nomex.Request
 
   @namespaces_path "/namespaces"
 

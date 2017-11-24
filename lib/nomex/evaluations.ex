@@ -1,6 +1,6 @@
-defmodule Nomad.Evaluations do
-  require Nomad.Request
-  alias Nomad.Request
+defmodule Nomex.Evaluations do
+  require Nomex.Request
+  alias Nomex.Request
 
   @evaluations_path "/evaluations"
 

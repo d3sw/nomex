@@ -1,6 +1,6 @@
-defmodule Nomad.Quotas do
-  require Nomad.Request
-  alias Nomad.Request
+defmodule Nomex.Quotas do
+  require Nomex.Request
+  alias Nomex.Request
 
   @quotas_path "/quotas"
   @quota_usages_path "/quota-usages"

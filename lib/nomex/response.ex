@@ -1,5 +1,5 @@
-defmodule Nomad.Response do
-  alias Nomad.Response
+defmodule Nomex.Response do
+  alias Nomex.Response
 
   defstruct headers: [], body: "", request_url: "", status_code: 0
 

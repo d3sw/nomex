@@ -1,6 +1,6 @@
-defmodule Nomad.Jobs do
-  require Nomad.Request
-  alias Nomad.Request
+defmodule Nomex.Jobs do
+  require Nomex.Request
+  alias Nomex.Request
 
   @jobs_path "/jobs"
 

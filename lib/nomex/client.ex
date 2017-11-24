@@ -1,6 +1,6 @@
-defmodule Nomad.Client do
-  require Nomad.Request
-  alias Nomad.Request
+defmodule Nomex.Client do
+  require Nomex.Request
+  alias Nomex.Request
 
   Request.meta_get :stats, "/client/stats"
 
