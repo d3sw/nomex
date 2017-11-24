@@ -1,14 +1,18 @@
-defmodule Nomad.Mixfile do
+defmodule Nomex.Mixfile do
   use Mix.Project
 
   def project do
     [
-      app: :nomad_client,
+      app: :nomex,
       version: "0.0.1",
       elixir: "~> 1.4",
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod,
-      deps: deps()
+      deps: deps(),
+      description: "Unofficial HashiCorp Nomad Client for Elixir",
+      licenses: ["MIT"],
+      maintainers: ["Jin Lee"],
+      links: %{"GitHub" => "https://github.com/neojin/nomex"}
     ]
   end
 

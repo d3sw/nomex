@@ -1,6 +1,6 @@
-defmodule Nomad.Nodes do
-  require Nomad.Request
-  alias Nomad.Request
+defmodule Nomex.Nodes do
+  require Nomex.Request
+  alias Nomex.Request
 
   @nodes_path "/nodex"
 

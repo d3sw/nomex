@@ -1,6 +1,6 @@
-defmodule Nomad.Allocations do
-  require Nomad.Request
-  alias Nomad.Request
+defmodule Nomex.Allocations do
+  require Nomex.Request
+  alias Nomex.Request
 
   @allocations_path "/allocations"
 

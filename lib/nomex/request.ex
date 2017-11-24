@@ -1,5 +1,5 @@
-defmodule Nomad.Request do
-  alias Nomad.{ Request, Response }
+defmodule Nomex.Request do
+  alias Nomex.{ Request, Response }
   use HTTPoison.Base
 
   defmacro meta_get(function_name, path) do
@@ -45,8 +45,8 @@ defmodule Nomad.Request do
   end
 
   def base do
-    host = URI.parse(Nomad.host())
-    version = "/#{Nomad.version()}"
+    host = URI.parse(Nomex.host())
+    version = "/#{Nomex.version()}"
     URI.merge(host, version) |> to_string
   end
 

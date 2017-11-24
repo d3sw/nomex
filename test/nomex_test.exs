@@ -1,6 +1,6 @@
-defmodule NomadTest do
+defmodule NomexTest do
   use ExUnit.Case
-  doctest Nomad
+  doctest Nomex
 
   test "the truth" do
     assert 1 + 1 == 2

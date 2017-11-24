@@ -1,6 +1,6 @@
-defmodule Nomad.Operator do
-  require Nomad.Request
-  alias Nomad.Request
+defmodule Nomex.Operator do
+  require Nomex.Request
+  alias Nomex.Request
 
   @raft_configuration_path "/operator/raft/configuration"
 

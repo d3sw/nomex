@@ -1,6 +1,6 @@
-defmodule Nomad.Deployments do
-  require Nomad.Request
-  alias Nomad.Request
+defmodule Nomex.Deployments do
+  require Nomex.Request
+  alias Nomex.Request
 
   @deployments_path "/deployments"
 
