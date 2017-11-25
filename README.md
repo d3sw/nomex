@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/neojin/nomex.svg?branch=master)](https://travis-ci.org/neojin/nomex)
+
 # Nomex
 
 Unofficial HashiCorp Nomad Client for Elixir
@@ -7,7 +9,8 @@ This is an Elixir client for Nomad's web API found here: [https://www.nomadproje
 ## Before You Proceed
 
 It should be noted that this library is a simple, thin wrapper around HTTPoison (for making requests)
-and Poison (for encoding/decoding JSON). I made purely for convenience.
+and Poison (for encoding/decoding JSON). I made this purely for convenience. If you need to interact
+with only a small subset of Nomad's API, I would consider rolling your own functions.
 
 ## What Works?
 
