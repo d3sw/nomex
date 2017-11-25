@@ -1,7 +1,19 @@
 defmodule Nomex.Response do
   alias Nomex.Response
 
-  defstruct headers: [], body: "", request_url: "", status_code: 0
+  @type t :: %Response{
+    headers: list,
+    body: map,
+    request_url: String.t,
+    status_code: integer
+  }
+  defstruct headers: [], body: {}, request_url: "", status_code: 0
+
+  @typedoc """
+  tuple that wraps response from `HTTPoison`.
+  Returns the status of the request made, along with the `Response`
+  """
+  @type tuple_t :: { :ok | :error, Response.t }
 
   def parse(%HTTPoison.Response{ status_code: 200 } = response) do
     body = response.body |> Poison.decode!

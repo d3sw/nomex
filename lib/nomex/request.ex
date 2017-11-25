@@ -2,26 +2,35 @@ defmodule Nomex.Request do
   alias Nomex.{ Request, Response }
   use HTTPoison.Base
 
+
   defmacro meta_get(function_name, path) do
+    function_name! = banged function_name
+
     quote do
+      @spec unquote(function_name)() :: Response.tuple_t
       def unquote(function_name)() do
         Request.request(:get, [unquote(path)])
       end
 
-      def unquote(:"#{function_name}!")() do
+      @spec unquote(function_name!)() :: Response.t
+      def unquote(function_name!)() do
         Request.request!(:get, [unquote(path)])
       end
     end
   end
 
   defmacro meta_get_id(function_name, path) do
+    function_name! = banged function_name
+
     quote do
+      @spec unquote(function_name)(String.t) :: Response.tuple_t
       def unquote(function_name)(param_id) do
         path = Path.join unquote(path), param_id
         Request.request(:get, [path])
       end
 
-      def unquote(:"#{function_name}!")(param_id) do
+      @spec unquote(function_name!)(String.t) :: Response.t
+      def unquote(function_name!)(param_id) do
         path = Path.join unquote(path), param_id
         Request.request!(:get, [path])
       end
@@ -29,15 +38,17 @@ defmodule Nomex.Request do
   end
 
   defmacro meta_get_prefix(function_name, path) do
+    function_name! = banged function_name
+
     quote do
+      @spec unquote(function_name)(String.t) :: Response.tuple_t
       def unquote(function_name)(prefix) do
         params = [ params: %{ prefix: prefix } ]
         Request.request(:get, [unquote(path), [], params])
       end
-    end
 
-    quote do
-      def unquote(:"#{function_name}!")(prefix) do
+      @spec unquote(function_name!)(String.t) :: Response.t
+      def unquote(function_name!)(prefix) do
         params = [ params: %{ prefix: prefix } ]
         Request.request!(:get, [unquote(path), [], params])
       end
@@ -63,5 +74,9 @@ defmodule Nomex.Request do
   def request!(method, params) do
     response = apply(Request, :"#{method}!", params)
     Response.parse response
+  end
+
+  defp banged(function_name) do
+    :"#{function_name}!"
   end
 end
