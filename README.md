@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/neojin/nomex.svg?branch=master)](https://travis-ci.org/neojin/nomex)
+[![Build Status](https://travis-ci.org/d3sw/nomex.svg?branch=master)](https://travis-ci.org/d3sw/nomex)
 
 # Nomex
 
