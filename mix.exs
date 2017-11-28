@@ -4,7 +4,7 @@ defmodule Nomex.Mixfile do
   def project do
     [
       app: :nomex,
-      version: "0.0.2",
+      version: "0.0.3",
       elixir: "~> 1.5",
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod,
@@ -46,9 +46,9 @@ defmodule Nomex.Mixfile do
   defp package() do
     [
       name: "nomex",
-      licenses: ["MIT"],
+      licenses: ["Apache-2.0"],
       maintainers: ["Jin Lee"],
-      links: %{"GitHub" => "https://github.com/neojin/nomex"}
+      links: %{"GitHub" => "https://github.com/d3sw/nomex"}
     ]
   end
 end
