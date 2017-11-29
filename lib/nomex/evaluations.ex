@@ -1,6 +1,10 @@
 defmodule Nomex.Evaluations do
+  require Nomex
   require Nomex.Request
   alias Nomex.Request
+
+
+  Nomex.meta_moduledoc("Evaluations", ["https://www.nomadproject.io/api/evaluations.html"])
 
   @evaluations_path "/evaluations"
 

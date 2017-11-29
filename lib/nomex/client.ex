@@ -1,6 +1,9 @@
 defmodule Nomex.Client do
+  require Nomex
   require Nomex.Request
   alias Nomex.Request
+
+  Nomex.meta_moduledoc("Client", ["https://www.nomadproject.io/api/client.html"])
 
   Request.meta_get :stats, "/client/stats"
 

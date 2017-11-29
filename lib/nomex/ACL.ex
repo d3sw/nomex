@@ -1,6 +1,12 @@
 defmodule Nomex.ACL do
+  require Nomex
   require Nomex.Request
   alias Nomex.Request
+
+  Nomex.meta_moduledoc(
+    "ACL",
+    ["https://www.nomadproject.io/api/acl-policies.html", "https://www.nomadproject.io/api/acl-tokens.html"]
+  )
 
   Request.meta_get :policies, "/acl/policies"
   Request.meta_get :tokens, "/acl/tokens"

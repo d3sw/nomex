@@ -1,6 +1,9 @@
 defmodule Nomex.Namespaces do
+  require Nomex
   require Nomex.Request
   alias Nomex.Request
+
+  Nomex.meta_moduledoc("Namespaces", ["https://www.nomadproject.io/api/namespaces.html"])
 
   @namespaces_path "/namespaces"
 

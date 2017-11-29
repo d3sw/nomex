@@ -25,15 +25,23 @@ As of now, all GET based JSON requests to Nomad should be working.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `nomex` to your list of dependencies in `mix.exs`:
-
 ```elixir
 def deps do
-  [{:nomex, "~> 0.0.1"}]
+  [{:nomex, "~> 0.0.3"}]
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/nomex](https://hexdocs.pm/nomex).
+## Configuration
+
+Currently there are two config variables. You should only need to change the nomad host:
+
+In `config/config.exs`:
+
+```elixir
+config :nomex, nomad_host: System.get_env("NOMAD_HOST") || "http://127.0.0.1:4646"
+config :nomex, nomad_version: "v1"
+```
+
+## Documentation
+
+[https://hexdocs.pm/nomex](https://hexdocs.pm/nomex).

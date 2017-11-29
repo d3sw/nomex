@@ -1,6 +1,9 @@
 defmodule Nomex.Deployments do
+  require Nomex
   require Nomex.Request
   alias Nomex.Request
+
+  Nomex.meta_moduledoc("Deployments", ["https://www.nomadproject.io/api/deployments.html"])
 
   @deployments_path "/deployments"
 

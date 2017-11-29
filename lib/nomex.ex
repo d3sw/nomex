@@ -29,4 +29,17 @@ defmodule Nomex do
   def version do
     Application.get_env(:nomex, :nomad_version)
   end
+
+  defmacro meta_moduledoc(name, urls \\ []) do
+    urls_formatted = Enum.map(urls, fn(url) -> "[#{url}](#{url})" end)
+      |> Enum.join("\n\n")
+
+    quote do
+      @moduledoc """
+      Methods in this module are used to interact with Nomad's #{unquote(name)} HTTP API. More information here:
+
+      #{unquote(urls_formatted)}
+      """
+    end
+  end
 end

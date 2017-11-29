@@ -1,6 +1,9 @@
 defmodule Nomex.Nodes do
+  require Nomex
   require Nomex.Request
   alias Nomex.Request
+
+  Nomex.meta_moduledoc("Nodes", ["https://www.nomadproject.io/api/nodes.html"])
 
   @nodes_path "/nodex"
 

@@ -1,6 +1,9 @@
 defmodule Nomex.Quotas do
+  require Nomex
   require Nomex.Request
   alias Nomex.Request
+
+  Nomex.meta_moduledoc("Quotas", ["https://www.nomadproject.io/api/quotas.html"])
 
   @quotas_path "/quotas"
   @quota_usages_path "/quota-usages"
