@@ -1,0 +1,52 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "http://127.0.0.1:4646/v1/nodes"
+    },
+    "response": {
+      "binary": false,
+      "body": "[{\"ID\":\"9f2371e1-4a87-e419-bfa0-a595d329c8f1\",\"Datacenter\":\"dc1\",\"Name\":\"D3SMLEEJ.local\",\"NodeClass\":\"\",\"Version\":\"0.7.0\",\"Drain\":false,\"Status\":\"ready\",\"StatusDescription\":\"\",\"CreateIndex\":5,\"ModifyIndex\":181}]",
+      "headers": {
+        "Content-Type": "application/json",
+        "Vary": "Accept-Encoding",
+        "X-Nomad-Index": "181",
+        "X-Nomad-Knownleader": "true",
+        "X-Nomad-Lastcontact": "0",
+        "Date": "Thu, 14 Dec 2017 17:19:10 GMT",
+        "Content-Length": "211"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  },
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "http://127.0.0.1:4646/v1/node/9f2371e1-4a87-e419-bfa0-a595d329c8f1/allocations"
+    },
+    "response": {
+      "binary": false,
+      "body": "[]",
+      "headers": {
+        "Content-Type": "application/json",
+        "Vary": "Accept-Encoding",
+        "X-Nomad-Index": "1",
+        "X-Nomad-Knownleader": "true",
+        "X-Nomad-Lastcontact": "0",
+        "Date": "Thu, 14 Dec 2017 17:19:10 GMT",
+        "Content-Length": "2"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

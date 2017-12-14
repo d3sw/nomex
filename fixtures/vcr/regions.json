@@ -1,0 +1,24 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "http://127.0.0.1:4646/v1/regions"
+    },
+    "response": {
+      "binary": false,
+      "body": "[\"global\"]",
+      "headers": {
+        "Content-Type": "application/json",
+        "Vary": "Accept-Encoding",
+        "Date": "Thu, 14 Dec 2017 17:09:59 GMT",
+        "Content-Length": "10"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

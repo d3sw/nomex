@@ -1,0 +1,24 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "http://127.0.0.1:4646/v1/operator/raft/configuration"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"Index\":1,\"Servers\":[{\"Address\":\"127.0.0.1:4647\",\"ID\":\"127.0.0.1:4647\",\"Leader\":true,\"Node\":\"D3SMLEEJ.local.global\",\"Voter\":true}]}",
+      "headers": {
+        "Content-Type": "application/json",
+        "Vary": "Accept-Encoding",
+        "Date": "Thu, 14 Dec 2017 17:09:59 GMT",
+        "Content-Length": "132"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "http://127.0.0.1:4646/v1/agent/members"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"ServerName\":\"D3SMLEEJ.local\",\"ServerRegion\":\"global\",\"ServerDC\":\"dc1\",\"Members\":[{\"Name\":\"D3SMLEEJ.local.global\",\"Addr\":\"127.0.0.1\",\"Port\":4648,\"Tags\":{\"port\":\"4647\",\"bootstrap\":\"1\",\"role\":\"nomad\",\"region\":\"global\",\"dc\":\"dc1\",\"vsn\":\"1\",\"mvn\":\"1\",\"build\":\"0.7.0\"},\"Status\":\"alive\",\"ProtocolMin\":1,\"ProtocolMax\":5,\"ProtocolCur\":2,\"DelegateMin\":2,\"DelegateMax\":5,\"DelegateCur\":4}]}",
+      "headers": {
+        "Content-Type": "application/json",
+        "Vary": "Accept-Encoding",
+        "Date": "Thu, 14 Dec 2017 17:10:00 GMT",
+        "Content-Length": "380"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

@@ -5,7 +5,7 @@ defmodule Nomex.Nodes do
 
   Nomex.meta_moduledoc("Nodes", ["https://www.nomadproject.io/api/nodes.html"])
 
-  @nodes_path "/nodex"
+  @nodes_path "/nodes"
 
   Request.meta_get :nodes, @nodes_path
   Request.meta_get_prefix :nodes, @nodes_path

@@ -1,0 +1,27 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "http://127.0.0.1:4646/v1/deployments"
+    },
+    "response": {
+      "binary": false,
+      "body": "[]",
+      "headers": {
+        "Content-Type": "application/json",
+        "Vary": "Accept-Encoding",
+        "X-Nomad-Index": "0",
+        "X-Nomad-Knownleader": "true",
+        "X-Nomad-Lastcontact": "0",
+        "Date": "Thu, 14 Dec 2017 17:10:00 GMT",
+        "Content-Length": "2"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

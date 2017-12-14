@@ -1,0 +1,24 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "http://127.0.0.1:4646/v1/agent/health"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"client\":{\"message\":\"ok\",\"ok\":true},\"server\":{\"message\":\"ok\",\"ok\":true}}",
+      "headers": {
+        "Content-Type": "application/json",
+        "Vary": "Accept-Encoding",
+        "Date": "Thu, 14 Dec 2017 17:10:00 GMT",
+        "Content-Length": "73"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
