@@ -4,6 +4,7 @@ use Mix.Config
 
 config :nomex, nomad_host: System.get_env("NOMAD_HOST") || "http://127.0.0.1:4646"
 config :nomex, nomad_version: "v1"
+config :nomex, nomad_token: System.get_env("NOMAD_TOKEN")
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this

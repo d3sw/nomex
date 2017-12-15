@@ -1,0 +1,24 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "put",
+      "options": [],
+      "request_body": "",
+      "url": "http://127.0.0.1:4646/v1/system/gc"
+    },
+    "response": {
+      "binary": false,
+      "body": "",
+      "headers": {
+        "Vary": "Accept-Encoding",
+        "Date": "Fri, 15 Dec 2017 19:46:18 GMT",
+        "Content-Length": "0",
+        "Content-Type": "text/plain; charset=utf-8"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

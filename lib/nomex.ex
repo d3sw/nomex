@@ -42,4 +42,18 @@ defmodule Nomex do
       """
     end
   end
+
+  @doc """
+  returns Nomad ACL token if it is specified in `config/config.exs`
+  ## Example
+
+      iex> Nomex.token
+      "936a095f-68da-c19a-0a65-4794b0ea74e5"
+
+  """
+
+  @spec token :: String.t
+  def token do
+    Application.get_env(:nomex, :nomad_token)
+  end
 end

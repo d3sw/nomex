@@ -151,4 +151,11 @@ defmodule Nomex.Request do
   defp banged(function_name) do
     :"#{function_name}!"
   end
+
+  defp process_headers(headers) do
+    case Nomex.token do
+      nil -> headers
+      _ -> [{ "X-Nomad-Token", Nomex.token } | headers]
+    end
+  end
 end
