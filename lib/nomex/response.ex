@@ -16,10 +16,8 @@ defmodule Nomex.Response do
   @type tuple_t :: { :ok | :error, Response.t }
 
   def parse(%HTTPoison.Response{ status_code: 200 } = response) do
-    body = response.body |> Poison.decode!
-
     nomad_response = common_data(response)
-    %{ nomad_response | body: body }
+    %{ nomad_response | body: decode(response.body) }
   end
 
   def parse(response) do
@@ -37,5 +35,13 @@ defmodule Nomex.Response do
       request_url: response.request_url,
       status_code: response.status_code
     }
+  end
+
+  defp decode(_ = "") do
+    %{}
+  end
+
+  defp decode(body) do
+    body |> Poison.decode!
   end
 end
